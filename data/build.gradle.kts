@@ -58,6 +58,21 @@ dependencies {
     kapt (libs.dagger.hilt.compiler)
     kapt (libs.androidx.hilt.compiler)
 
+    /* room */
+    implementation(libs.room.runtime)
+    kapt (libs.room.compiler)
+    implementation (libs.room.ktx) // Room Flow
+
+    /* data store */
+    implementation(libs.androidx.dataStore.preferences)
+
+    /* retrofit */
+    implementation (libs.retrofit)
+    implementation (libs.retrofit.converter.moshi)
+    implementation (libs.converter.gson)
+    implementation (libs.okhttp)
+    implementation (libs.logging.interceptor)
+
     // Log
     implementation(libs.timber)
 
