@@ -1,9 +1,11 @@
 import java.util.Properties
 
 plugins {
+    kotlin("kapt")
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.hilt.android)
 }
 
 val properties = Properties()
@@ -68,6 +70,17 @@ android {
 dependencies {
     implementation(projects.domain)
     implementation(projects.data)
+
+    /* hilt */
+    implementation(libs.hilt)
+    kapt (libs.dagger.hilt.compiler)
+    kapt (libs.androidx.hilt.compiler)
+
+    // Hilt + Compose hiltViewModel()
+    implementation(libs.androidx.hilt.navigation.compose)
+
+    // Log
+    implementation(libs.timber)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

@@ -1,8 +1,10 @@
 import java.util.Properties
 
 plugins {
+    kotlin("kapt")
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.hilt.android)
 }
 
 val properties = Properties()
@@ -50,6 +52,14 @@ android {
 
 dependencies {
     implementation(projects.domain)
+
+    /* hilt */
+    implementation(libs.hilt)
+    kapt (libs.dagger.hilt.compiler)
+    kapt (libs.androidx.hilt.compiler)
+
+    // Log
+    implementation(libs.timber)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
