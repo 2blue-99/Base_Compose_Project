@@ -8,6 +8,11 @@ android {
     namespace = "com.example.base_compose_project"
     compileSdk = 35
 
+    lint {
+        // androidx.lifecycle.lint.NonNullableMutableLiveDataDetector 버전 차이 이슈로 우회 처리
+        disable += "NullSafeMutableLiveData"
+    }
+
     defaultConfig {
         applicationId = "com.example.base_compose_project"
         minSdk = 24
@@ -19,12 +24,18 @@ android {
     }
 
     buildTypes {
+        debug {
+            applicationIdSuffix = "dev"
+        }
+
         release {
+            // 난독화
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
