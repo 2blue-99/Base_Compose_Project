@@ -1,7 +1,12 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
 }
+
+val properties = Properties()
+properties.load(project.rootProject.file("local.properties").inputStream())
 
 android {
     namespace = "com.example.data"
@@ -12,10 +17,18 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+
+        buildConfigField("String", "COMMON_KEY", properties.getProperty("COMMON_KEY"))
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "TEST_KEY", properties.getProperty("DEV_KEY"))
+        }
+
         release {
+            buildConfigField("String", "TEST_KEY", properties.getProperty("RELEASE_KEY"))
+
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -29,6 +42,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+    buildFeatures {
+        buildConfig = true
     }
 }
 

@@ -1,8 +1,13 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 }
+
+val properties = Properties()
+properties.load(project.rootProject.file("local.properties").inputStream())
 
 android {
     namespace = "com.example.base_compose_project"
@@ -21,14 +26,23 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val nativeAppKey = properties.getProperty("TEST_ID") ?: ""
+        manifestPlaceholders["TEST_ID"] = nativeAppKey
+
+        buildConfigField("String", "COMMON_KEY", properties.getProperty("COMMON_KEY"))
     }
 
     buildTypes {
         debug {
+            buildConfigField("String", "TEST_KEY", properties.getProperty("DEV_KEY"))
+
             applicationIdSuffix = "dev"
         }
 
         release {
+            buildConfigField("String", "TEST_KEY", properties.getProperty("RELEASE_KEY"))
+
             // 난독화
             isMinifyEnabled = false
             proguardFiles(
