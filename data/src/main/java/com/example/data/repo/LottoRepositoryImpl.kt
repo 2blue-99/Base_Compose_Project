@@ -1,4 +1,4 @@
-package com.lucky_lotto.data.repo
+package com.example.data.repo
 
 import com.example.data.remote.datasource.LottoDataSourceImpl
 import com.example.domain.repository.LottoRepository

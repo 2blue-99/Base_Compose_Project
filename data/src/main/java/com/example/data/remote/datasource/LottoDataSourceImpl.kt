@@ -1,7 +1,6 @@
 package com.example.data.remote.datasource
 
 import com.example.data.util.apiErrorHandler
-import com.lucky_lotto.data.remote.datasource.LottoDataSource
 import com.example.data.remote.model.LottoResponse
 import com.example.domain.util.APIResponseState
 import javax.inject.Inject

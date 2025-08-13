@@ -1,4 +1,4 @@
-package com.lucky_lotto.data.remote.util
+package com.example.data.remote.util
 
 import okhttp3.Interceptor
 import okhttp3.Response

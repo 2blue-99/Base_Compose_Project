@@ -1,7 +1,7 @@
 package com.example.data.util
 
-import com.lucky_lotto.data.util.connect.ConnectivityManagerMonitor
-import com.lucky_lotto.data.util.connect.NetworkMonitor
+import com.example.data.util.connect.ConnectivityManagerMonitor
+import com.example.data.util.connect.NetworkMonitor
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

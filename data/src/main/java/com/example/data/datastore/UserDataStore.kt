@@ -1,4 +1,4 @@
-package com.lucky_lotto.data.datastore
+package com.example.data.datastore
 
 import kotlinx.coroutines.flow.Flow
 

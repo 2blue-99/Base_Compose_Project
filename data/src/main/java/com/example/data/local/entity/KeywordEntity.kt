@@ -1,4 +1,4 @@
-package com.lucky_lotto.data.local.entity
+package com.example.data.local.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -1,8 +1,8 @@
-package com.lucky_lotto.data.repo
+package com.example.data.repo
 
 import com.example.domain.repository.UserRepository
-import com.lucky_lotto.data.datastore.UserDataStore
-import com.lucky_lotto.data.local.dao.KeywordDao
+import com.example.data.datastore.UserDataStore
+import com.example.data.local.dao.KeywordDao
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject

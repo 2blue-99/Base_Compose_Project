@@ -1,6 +1,6 @@
-package com.lucky_lotto.data.local.di
+package com.example.data.local.di
 
-import com.lucky_lotto.data.local.dao.KeywordDao
+import com.example.data.local.dao.KeywordDao
 import com.example.data.local.db.AppDatabase
 import dagger.Module
 import dagger.Provides

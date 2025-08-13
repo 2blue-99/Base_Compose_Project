@@ -1,6 +1,6 @@
-package com.lucky_lotto.data.remote.di
+package com.example.data.remote.di
 
-import com.lucky_lotto.data.remote.datasource.LottoDataSource
+import com.example.data.remote.datasource.LottoDataSource
 import com.example.data.remote.datasource.LottoDataSourceImpl
 import dagger.Module
 import dagger.Provides

@@ -1,6 +1,4 @@
-package com.lucky_lotto.data.util
-
-import com.lucky_lotto.data.local.entity.KeywordEntity
+package com.example.data.util
 
 object Mapper {
 //    fun Keyword.toEntity(): KeywordEntity = KeywordEntity(id, title)

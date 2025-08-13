@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
-import com.lucky_lotto.data.datastore.UserDataStore
+import com.example.data.datastore.UserDataStore
 import com.example.data.datastore.UserStoreImpl
 import dagger.Module
 import dagger.Provides

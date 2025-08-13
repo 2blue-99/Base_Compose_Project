@@ -1,4 +1,4 @@
-package com.lucky_lotto.data.util.connect
+package com.example.data.util.connect
 
 import kotlinx.coroutines.flow.Flow
 

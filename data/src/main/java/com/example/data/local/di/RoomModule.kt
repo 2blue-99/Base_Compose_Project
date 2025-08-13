@@ -1,4 +1,4 @@
-package com.lucky_lotto.data.local.di
+package com.example.data.local.di
 
 import android.content.Context
 import androidx.room.Room

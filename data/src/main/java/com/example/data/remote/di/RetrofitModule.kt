@@ -1,6 +1,6 @@
-package com.lucky_lotto.data.remote.di
+package com.example.data.remote.di
 
-import com.lucky_lotto.data.remote.util.NetworkInterceptor
+import com.example.data.remote.util.NetworkInterceptor
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module

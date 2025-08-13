@@ -1,4 +1,4 @@
-package com.lucky_lotto.data.remote.datasource
+package com.example.data.remote.datasource
 
 import com.example.data.remote.model.LottoResponse
 import retrofit2.Response

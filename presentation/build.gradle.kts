@@ -71,6 +71,16 @@ dependencies {
     implementation(projects.domain)
     implementation(projects.data)
 
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.foundation)
+
     /* hilt */
     implementation(libs.hilt)
     kapt (libs.dagger.hilt.compiler)
@@ -82,14 +92,10 @@ dependencies {
     // Log
     implementation(libs.timber)
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
+    // 애드몹 광고
+//    implementation(libs.play.services.ads)
+//    implementation(libs.play.services.ads.api)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -97,4 +103,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Truth - 테스트 로그 라이브러리
+    implementation(libs.truth)
+    implementation(libs.truth.java8.extension) // Truth가 Java 8에 도입된 기능을 이용해 테스트하도록 만들어주는 추가 라이브러리
 }
