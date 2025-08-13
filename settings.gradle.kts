@@ -19,7 +19,9 @@ dependencyResolutionManagement {
     }
 }
 
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 rootProject.name = "Base_Compose_Project"
-include(":app")
+include(":presentation")
 include(":data")
 include(":domain")
