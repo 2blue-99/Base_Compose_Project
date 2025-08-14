@@ -1,11 +1,11 @@
-package com.example.base_compose_project
+package com.example.base_compose_project.screen.home
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(
+class HomeViewModel @Inject constructor(
 
 ): ViewModel() {
 

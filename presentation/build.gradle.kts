@@ -79,7 +79,11 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    // Common Navigation Bar
+    implementation(libs.androidx.material)
     implementation(libs.androidx.foundation)
+    // Compose Navigation
+    implementation(libs.androidx.navigation.compose)
 
     /* hilt */
     implementation(libs.hilt)

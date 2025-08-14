@@ -8,7 +8,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.plus
 import timber.log.Timber
 
-open class BaseViewModel: ViewModel() {
+interface UIState
+interface UIEffect
+interface UIEvent
+
+open class BaseViewModel<Event: UIEvent, State: UIState, Effect: UIEffect>: ViewModel() {
 
     val modelScope = viewModelScope + exceptionHandler()
     val ioScope = CoroutineScope(Dispatchers.IO) + exceptionHandler()
