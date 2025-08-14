@@ -19,6 +19,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         // setContentView 이전에 호출 + light 로 설정
         enableEdgeToEdge(
             statusBarStyle = SystemBarStyle.light(

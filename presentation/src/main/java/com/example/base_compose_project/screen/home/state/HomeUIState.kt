@@ -1,7 +1,9 @@
 package com.example.base_compose_project.screen.home.state
 
+import com.example.base_compose_project.base.UIState
 
-sealed interface HomeUIState {
+
+sealed interface HomeUIState:UIState {
 
     data object Loading : HomeUIState
 
